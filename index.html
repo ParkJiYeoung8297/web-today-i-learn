@@ -5,9 +5,9 @@
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
     <!-- TODO: Open Graph 메타 태그를 설정하세요 -->
-    <!-- <meta property="og:title" content="페이지 제목" /> -->
-    <!-- <meta property="og:description" content="페이지 설명" /> -->
-    <!-- <meta property="og:image" content="./images/thumbnail.jpg" /> -->
+    <meta property="og:title" content="아티 소개글" />
+    <meta property="og:description" content="백엔드 개발자 아티입니다." />
+    <meta property="og:image" content="https://via.placeholder.com/1200x630" />
 
     <title>Today I Learn</title>
     <link rel="stylesheet" href="./css/main.css" />
@@ -16,12 +16,15 @@
   <body>
     <!-- 상단 내비게이션 -->
     <nav class="top-nav">
-      <span class="nav-logo">My Page</span>
+      <span class="nav-logo">아티's Page</span>
       <ul class="nav-links">
         <li><a href="#about">자기소개</a></li>
         <li><a href="#gallery">갤러리</a></li>
         <li><a href="#works">인생 작품</a></li>
         <li><a href="#til">TIL</a></li>
+
+          <!-- ✅ 다크모드 버튼 -->
+        <button id="dark-mode-toggle">🌙</button>
       </ul>
     </nav>
 
@@ -30,21 +33,27 @@
       <div class="profile-card">
         <div class="profile-image">
           <!-- TODO: 프로필 이미지를 넣어주세요 -->
-          <!-- <img src="./images/profile.jpg" alt="프로필 사진" /> -->
+          <img src="./images/profile.png" alt="프로필 사진" />
         </div>
         <div class="profile-info">
-          <h1>닉네임</h1>
-          <p class="tagline">한 줄 소개를 작성해주세요.</p>
+          <h1>아티</h1>
+          <p class="tagline">안녕하세요. it를 공부하는 아(이)티입니다.</p>
         </div>
       </div>
     </section>
 
     <main>
+
       <!-- 자기소개 -->
       <section class="content-section">
         <h2>자기소개</h2>
-        <p>자기소개를 작성해주세요.</p>
-        <!-- TODO: 소개 글 안에 블로그, GitHub 등 관련 링크를 <a> 태그로 연결하세요 -->
+        <p>안녕하세요. 백엔드 13층 둠바마을 주민 아티입니다. 먹는거 좋아하고, 뮤지컬 보는 거 좋아합니다.</p>
+
+        <div class="profile-links">
+          <a href="https://github.com/ParkJiYeoung8297" target="_blank">🐙 GitHub</a>
+          <a href="https://velog.io/@wldud8297/posts" target="_blank">✍️ Velog</a>
+          <a href="https://wldud8297.tistory.com/" target="_blank">📘 Tistory</a>
+        </div>
       </section>
 
       <!-- 기본 정보 -->
@@ -54,19 +63,19 @@
         <table class="info-table">
           <tr>
             <th>이름</th>
-            <td></td>
+            <td>박지영</td>
           </tr>
           <tr>
             <th>MBTI</th>
-            <td></td>
+            <td>INFP</td>
           </tr>
           <tr>
             <th>취미</th>
-            <td></td>
+            <td>클라이밍 🧗🏻‍♀️</td>
           </tr>
           <tr>
             <th>좋아하는 음식</th>
-            <td></td>
+            <td>매운거, 치킨, 걍 다 좋아해요</td>
           </tr>
         </table>
       </section>
@@ -74,34 +83,124 @@
       <!-- 나만의 갤러리 -->
       <section class="content-section" id="gallery">
         <h2>나만의 갤러리</h2>
-        <p class="section-desc">갤러리 부제를 작성해주세요. (예: 기억에 남는 여행지)</p>
-        <div class="gallery-grid">
-          <!-- TODO: 9장의 이미지를 배치하세요 -->
-          <!--
-          <img src="./images/gallery-1.jpg" alt="갤러리 이미지 1" />
-          <img src="./images/gallery-2.jpg" alt="갤러리 이미지 2" />
-          ...
-          -->
+        <p class="section-desc">유럽 여행 기록 ✨ <br>(커서를 올리면 글을 볼 수 있어요!)</p>
+
+        <!-- 🍕 FOOD -->
+        <div class="gallery-category">
+          <h3>🍕 Food</h3>
+          <div class="gallery-grid">
+
+            <div class="gallery-item">
+              <img src="./images/train_restaurant.gif" alt="기차 레스토랑" />
+              <div class="overlay">🚂 기차가 배달해주는 음식</div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/pizza.jpeg" alt="피자" />
+              <div class="overlay">🍕 케이크가 없어서 피자에 초 꽂은 날</div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/beer.jpeg" alt="맥주" />
+              <div class="overlay">🍺 라이트 맥주와 흑맥주를 섞은 레자네(Rezane)</div>
+            </div>
+
+          </div>
         </div>
+
+        <!-- 🏄 ACTIVITY -->
+        <div class="gallery-category">
+          <h3>🏄 Activity</h3>
+          <div class="gallery-grid">
+
+            <div class="gallery-item">
+              <img src="./images/surfing.jpeg" alt="서핑" />
+              <div class="overlay">🏄 포르투갈에서 처음 도전한 서핑</div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/musical.jpeg" alt="뮤지컬" />
+              <div class="overlay">🎭 런던에서 첫 뮤지컬</div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/football.jpeg" alt="축구" />
+              <div class="overlay">⚽ 손흥민의 토트넘 경기 직관</div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 🌍 LANDSCAPE -->
+        <div class="gallery-category">
+          <h3>🌍 Landscape</h3>
+          <div class="gallery-grid">
+
+            <div class="gallery-item">
+              <img src="./images/porto.jpeg" alt="포르투" />
+              <div class="overlay">🇵🇹 포르투의 강 풍경</div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/poland.jpeg" alt="폴란드" />
+              <div class="overlay">🇵🇱 폴란드의 알록달록 건물</div>
+            </div>
+
+            <div class="gallery-item">
+              <img src="./images/wein.jpeg" alt="와인" />
+              <div class="overlay">🍷 비엔나의 크리스마스 마켓</div>
+            </div>
+
+          </div>
+        </div>
+
       </section>
 
-      <!-- 나를 울린 인생 작품 -->
-      <section class="content-section" id="works">
-        <h2>나를 울린 인생 작품</h2>
-        <div class="works-list">
-          <!-- TODO: 최소 2가지 작품을 소개하세요 -->
-          <!-- TODO: 작품 중 하나는 <video> 또는 <iframe>으로 영상을 삽입하세요 -->
-          <article class="work-card">
-            <div class="work-thumbnail">
-              <!-- 작품 이미지 -->
-            </div>
-            <div class="work-info">
-              <h3>작품 제목</h3>
-              <p>작품에 대한 설명을 작성해주세요.</p>
-            </div>
-          </article>
-        </div>
-      </section>
+<!-- 나를 울린 인생 작품 -->
+<section class="content-section" id="works">
+  <h2>나를 울린 인생 작품</h2>
+
+  <!-- 목록 형태 추가 -->
+  <ul class="works-list">
+
+<ul class="works-list">
+
+  <!-- 작품 1 -->
+  <li class="work-card">
+    <div class="media">
+      <img src="images/signal.png" alt="시그널 포스터" />
+    </div>
+
+    <div class="work-content">
+      <h3>시그널</h3>
+      <p>
+        과거와 무전하며 사건을 해결하는 내용입니다.<br>
+        스토리도 긴장감 있고, 떡밥 회수도 좋아서 정말 추천하는 인생드라마입니다.<br>
+        올해 시즌 2 나올 예정이었는데, 무산된.. 그래서 더 눈물나는 드라마에요..😭
+      </p>
+    </div>
+  </li>
+
+  <!-- 작품 2 -->
+  <li class="work-card">
+    <div class="media video">
+      <iframe 
+        src="https://www.youtube.com/embed/w2SuylgZdvY"
+        title="YouTube video"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="work-content">
+      <h3>봄 내음보다 너를</h3>
+      <p>
+        최근에 쇼츠로 들었던 노래인데, 목소리가 너무 좋더라고요.  <br>
+      </p>
+    </div>
+  </li>
+
+</ul>
+</section>
 
       <!-- TIL (Today I Learned) -->
       <section class="content-section" id="til">
@@ -131,11 +230,13 @@
         <!-- TIL 목록: 폼으로 등록하면 여기에 항목이 추가됩니다 -->
         <div class="til-list" id="til-list">
           <!-- 아래는 예시 항목입니다. 자유롭게 수정하거나 삭제하세요 -->
-          <article class="til-item">
-            <time>2026-03-15</time>
-            <h3>HTML 시멘틱 태그</h3>
-            <p>header, nav, main, section, article, footer 등 시멘틱 태그의 역할과 사용법을 배웠다.</p>
-          </article>
+        </div>
+        <div class="til-list" id="til-list">
+            <article class="til-item">
+              <time>2026-03-18</time>
+              <h3>DFS 알고리즘</h3>
+              <p>DFS를 알고리즘에 대해 배우고, 문제를 풀었다.</p>
+            </article>
         </div>
       </section>
 

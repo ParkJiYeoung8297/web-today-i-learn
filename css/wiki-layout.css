@@ -1,3 +1,7 @@
+body {
+  background-color: #a7e9e0;
+}
+
 /* 상단 내비게이션 */
 .top-nav {
   position: sticky;
@@ -31,6 +35,8 @@
   transition: color 0.2s;
 }
 
+
+
 .nav-links a:hover {
   color: var(--primary-color);
 }
@@ -41,6 +47,10 @@
   justify-content: center;
   padding: 64px 32px;
   background-color: var(--hero-bg-color);
+}
+
+.hero {
+  background-color: #e8f8f5; /* body랑 동일하게 */
 }
 
 .profile-card {
@@ -78,13 +88,23 @@
 /* 메인 콘텐츠 */
 main {
   max-width: 780px;
-  margin: 0 auto;
+  margin: auto;
   padding: 0 24px;
 }
 
 .content-section {
   padding: 48px 0;
-  border-bottom: 1px solid var(--divider-color);
+
+}
+
+.content-section {
+  background: white;
+  border-radius: 16px;
+  padding: 32px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
 }
 
 .content-section:last-child {
@@ -359,6 +379,162 @@ footer {
   border: none;
   border-radius: 4px;
 }
+
+.profile-links {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+}
+
+.profile-links a {
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.profile-links a:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.works-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 카드 */
+.work-card {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  border-radius: 16px;
+  background: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+/* hover 효과 */
+.work-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* 미디어 영역 */
+.media {
+  width: 200px;
+  min-width: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* 이미지 */
+.media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ⭐ 핵심: 영상 비율 유지 (16:9) */
+.media.video {
+  position: relative;
+  width: 300px;
+  aspect-ratio: 16 / 9;
+}
+
+.media.video iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* 텍스트 */
+.work-content h3 {
+  margin-bottom: 8px;
+  font-size: 1.2rem;
+}
+
+.work-content p {
+  color: #555;
+  line-height: 1.5;
+}
+
+.gallery-category {
+  margin-bottom: 48px;
+}
+
+.gallery-category h3 {
+  font-size: 1.3rem;
+  margin-bottom: 16px;
+  padding-left: 8px;
+  border-left: 4px solid var(--primary-color);
+}
+
+/* grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+/* 이미지 카드 느낌 */
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* hover 효과 */
+.gallery-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.gallery-category:nth-child(1) h3 {
+  border-color: #ff7f50; /* 음식 - 주황 */
+}
+
+.gallery-category:nth-child(2) h3 {
+  border-color: #1e90ff; /* 액티비티 - 파랑 */
+}
+
+.gallery-category:nth-child(3) h3 {
+  border-color: #2ecc71; /* 풍경 - 초록 */
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+
 
 /* 변수 */
 :root {
